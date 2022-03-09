@@ -47,7 +47,6 @@ employeeId INT,
 time VARCHAR(300),
 FOREIGN KEY (employeeId) REFERENCES employees(id));
 
-
 CREATE TABLE family(
 childrenId INT,
 parentId INT,
