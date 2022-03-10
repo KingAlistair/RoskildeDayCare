@@ -41,11 +41,10 @@ public class DB_Statements {
         executeQuery(query);
     }
 
-    public static void insertInto(String tableName, String column2, String column3) {
+    public static void insertNewChildren(String tableName, String name, String birthDate) {
         query = "insert into " + tableName +
                 "(name, birthdate) values " +
-                "('" + column2 + "'," + "'" + column3 + "')";
-
+                "('" + name + "'," + "'" + birthDate + "')";
         executeQuery(query);
     }
 }
