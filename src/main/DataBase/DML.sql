@@ -17,13 +17,13 @@ VALUES (1,1),(1,2),(2,3),(3,3);
 
 INSERT INTO daycare_groups
 VALUES ('Bunny Group', 2,1),
-('Bunny Group', 2,3),
+('Bunny Group', 2,2),
 ('Bunny Group', 2,3);
 
-#Query to check if works
-SELECT children.name, parents.name,employees.name FROM children
+#Query to check if works -
+SELECT children.name, parents.name, employees.name FROM children
 INNER JOIN family ON children.id = family.children_id
-INNER JOIN parents on family.parent_id = parents.id
+INNER JOIN parents ON family.parent_id = parents.id
 INNER JOIN daycare_groups ON children.id = daycare_groups.children_id
 INNER JOIN employees ON daycare_groups.employee_id = employees.id
 WHERE daycare_groups.name = 'Bunny group';
