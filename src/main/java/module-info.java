@@ -1,8 +1,9 @@
 module com.example.roskildedaycareapp {
     requires javafx.controls;
     requires javafx.fxml;
+    requires java.sql;
 
 
-    opens com.example.roskildedaycareapp to javafx.fxml;
-    exports com.example.roskildedaycareapp;
+    opens GUI to javafx.fxml;
+    exports GUI;
 }

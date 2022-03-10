@@ -20,7 +20,7 @@ VALUES ('Bunny Group', 2,1),
 ('Bunny Group', 2,2),
 ('Bunny Group', 2,3);
 
-#Query to check if works -
+#Query to check if works - (spoiler it does)
 SELECT children.name, parents.name, employees.name FROM children
 INNER JOIN family ON children.id = family.children_id
 INNER JOIN parents ON family.parent_id = parents.id
