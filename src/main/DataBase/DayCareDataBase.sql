@@ -34,7 +34,7 @@ parentId INT,
 FOREIGN KEY (parentId) REFERENCES parents_waiting_list(id),
 birthdate DATE);
 
-CREATE TABLE groups(
+CREATE TABLE daycare_groups(
 name VARCHAR(300),
 employeeId INT,
 childrenId INT,
