@@ -7,8 +7,9 @@ public class DB_Test {
         //  DB_Connector.connect("root", "2519");
         DB_Statements.connect("root", "2519");
 
-        System.out.println("Hi user! What do you want to do?");
+        System.out.println("Hi user! What do you want to do?\n");
         System.out.println("1: Add new child to database");
+        System.out.println("2: Get child by id");
 
         Scanner sc = new Scanner(System.in);
         String input = sc.nextLine();
@@ -17,6 +18,13 @@ public class DB_Test {
             case "1":
                 addNewChild();
                 break;
+
+            case "2":
+                System.out.println("Add id:");
+                String id = sc.nextLine();
+                DB_Statements.getChildNameById(id);
+                break;
+
             default:
                 System.out.println("Wrong input, bye!");
                 break;
@@ -30,8 +38,19 @@ public class DB_Test {
         String childName = sc.nextLine();
         System.out.println("Birthdate (Format: \"2018.01.01\")");
         String birthDate = sc.nextLine();
-        DB_Statements.insertNewChildren("children", childName, birthDate);
+        DB_Statements.insertNewChildren(childName, birthDate);
 
-        System.out.println("\n" + childName + " was added to the Database, dont forget to refresh database ^^");
+        System.out.println("\nChild, " + childName + " was added to the Database, dont forget to refresh database ^^");
+
+        System.out.println("Lets add the parent of " + childName);
+        System.out.println("Name:");
+        String parentName = sc.nextLine();
+        System.out.println("Phone number: (+45 11 11 11 11)");
+        String phoneNumber = sc.nextLine();
+        System.out.println("Address:");
+        String address = sc.nextLine();
+        DB_Statements.insertNewParent(parentName, phoneNumber, address);
+
+        System.out.println("\nParent," + parentName + " was added to the Database, dont forget to refresh database ^^");
     }
 }

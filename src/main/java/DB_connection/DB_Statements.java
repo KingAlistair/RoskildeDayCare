@@ -41,10 +41,37 @@ public class DB_Statements {
         executeQuery(query);
     }
 
-    public static void insertNewChildren(String tableName, String name, String birthDate) {
-        query = "insert into " + tableName +
+    public static void insertNewChildren(String name, String birthDate) {
+        query = "insert into " + "children" +
                 "(name, birthdate) values " +
                 "('" + name + "'," + "'" + birthDate + "')";
         executeQuery(query);
+    }
+
+    public static void insertNewParent(String name, String phoneNumber, String address) {
+        query = "insert into " + "parents" +
+                "(name, phone_number, address) values " +
+                "('" + name + "'," + "'" + phoneNumber + "'," + "'" + address + "')";
+        executeQuery(query);
+    }
+
+    public static void getChildNameById(String id) {
+
+        try {
+            String url = "jdbc:mysql://localhost:3307/daycare";
+
+            connection = DB_Connector.connect("root","2519");
+            Statement stmt = connection.createStatement();
+
+            ResultSet rs = stmt.executeQuery("SELECT name FROM children WHERE id = "+id);
+            while (rs.next()) {
+                String lastName = rs.getString("name");
+                System.out.println(lastName);
+            }
+            connection.close();
+        } catch (Exception e) {
+            System.err.println("Got an exception! ");
+            System.err.println(e.getMessage());
+        }
     }
 }
