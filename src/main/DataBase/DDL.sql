@@ -48,3 +48,12 @@ children_id INT,
 parent_id INT,
 FOREIGN KEY (children_id) REFERENCES children(id),
 FOREIGN KEY (parent_id) REFERENCES parents(id));
+
+CREATE TABLE users(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(255),
+    password VARCHAR(255),
+    FOREIGN KEY (id) REFERENCES employees(id)
+);
+
+DROP TABLE users;

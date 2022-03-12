@@ -10,7 +10,7 @@ public class DB_Utils {
     //we create our constant variables, which we will use to connect to our database
     private static final String URL = "jdbc:mysql://localhost:3306/daycare" ;
     private static final String USERNAME = "root";
-    private static final String PASSWORD = "password!";
+    private static final String PASSWORD = "pass";
     private static final String DATABASE = "daycare";
 
 
@@ -28,7 +28,7 @@ public class DB_Utils {
         try {
 
             connect = DriverManager.getConnection(URL, USERNAME, PASSWORD );
-            preparedStatement = connect.prepareStatement("SELECT password FROM employees WHERE username = ?");
+            preparedStatement = connect.prepareStatement("SELECT password FROM users WHERE username = ?");
             rs = preparedStatement.executeQuery();
 
             //if it didn't work

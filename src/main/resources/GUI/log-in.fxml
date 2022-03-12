@@ -5,44 +5,55 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 
-
 <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.LogInController">
    <children>
-      <AnchorPane prefHeight="400.0" prefWidth="284.0" style="-fx-background-color: e1b1e5;">
+      <AnchorPane prefHeight="400.0" prefWidth="320.0" style="-fx-background-color: e1b1e5;">
          <children>
-            <Label layoutX="14.0" layoutY="78.0" text="WELCOME TO ROSKILDE DAYCARE">
+            <ImageView fx:id="image" fitHeight="199.0" fitWidth="312.0" layoutX="10.0" layoutY="144.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/bff.jpg" />
+               </image>
+            </ImageView>
+            <Label layoutX="32.0" layoutY="29.0" text="      WELCOME TO &#10;ROSKILDE DAYCARE">
                <font>
-                  <Font name="BiauKai" size="13.0" />
+                  <Font name="Yuppy TC Regular" size="24.0" />
                </font>
             </Label>
-         </children>
-      </AnchorPane>
-      <AnchorPane prefHeight="400.0" prefWidth="401.0" style="-fx-background-color: eeefed;">
-         <children>
-            <Label layoutX="14.0" layoutY="212.0" text="Username">
-               <font>
-                  <Font name="Big Caslon Medium" size="13.0" />
-               </font>
-            </Label>
-            <Label layoutX="14.0" layoutY="249.0" text="Password">
-               <font>
-                  <Font name="Big Caslon Medium" size="13.0" />
-               </font>
-            </Label>
-            <PasswordField fx:id="pswFld" layoutX="77.0" layoutY="245.0" />
-            <TextField fx:id="usrNmFld" layoutX="77.0" layoutY="207.0" />
-            <Button fx:id="lgnBtn" layoutX="77.0" layoutY="298.0" mnemonicParsing="false" text="Login">
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-               <font>
-                  <Font name="BiauKai" size="13.0" />
-               </font>
-            </Button>
+            <AnchorPane layoutX="308.0" prefHeight="400.0" prefWidth="301.0" style="-fx-background-color: eeefed;">
+               <children>
+                  <Label layoutX="14.0" layoutY="212.0" text="Username">
+                     <font>
+                        <Font name="Yuppy TC Regular" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="14.0" layoutY="249.0" text="Password">
+                     <font>
+                        <Font name="Yuppy TC Regular" size="13.0" />
+                     </font>
+                  </Label>
+                  <PasswordField fx:id="pswFld" depthTest="ENABLE" layoutX="77.0" layoutY="245.0" />
+                  <TextField fx:id="usrNmFld" layoutX="77.0" layoutY="207.0" />
+                  <Button fx:id="lgnBtn" blendMode="GREEN" layoutX="124.0" layoutY="305.0" mnemonicParsing="false" text="Login" textFill="#0a0a0a">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font name="Yuppy TC Regular" size="12.0" />
+                     </font>
+                  </Button>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="76.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/panda.jpg" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
          </children>
       </AnchorPane>
    </children>
