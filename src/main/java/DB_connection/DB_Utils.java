@@ -23,10 +23,8 @@ public class DB_Utils {
         PreparedStatement preparedStatement = null;
         ResultSet rs = null;
 
-
         //is going to try and connect to the DB via a query
         try {
-
             connect = DriverManager.getConnection(URL, USERNAME, PASSWORD );
             preparedStatement = connect.prepareStatement("SELECT password FROM users WHERE username = ?");
             rs = preparedStatement.executeQuery();
@@ -44,7 +42,6 @@ public class DB_Utils {
                     String retrievedPassword = rs.getString("password");
                     if (retrievedPassword.equals("password")){
                         // this is where the change scene will happen
-
                     }
                 }
             }
