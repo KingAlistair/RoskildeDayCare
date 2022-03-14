@@ -1,12 +1,13 @@
 package DB_connection;
 
-import GUI.SceneController;
-import javafx.event.ActionEvent;
-
 import java.sql.*;
 import java.util.ArrayList;
 
 public class DB_Statements {
+
+    //Use your own dataBase login info
+    final private static String userName = "root";
+    final private static String passWord = "2519";
 
     private static Connection connection;
 
@@ -18,6 +19,8 @@ public class DB_Statements {
 
     //Declare a query
     private static String query;
+
+
 
     public static void connect(String user, String password) {
         connection = DB_Connector.connect(user, password);
@@ -33,13 +36,40 @@ public class DB_Statements {
         }
     }
 
-    public static void createTable(String tableName, String column2, String column3) {
-        query = "create table if not exists " +
-                tableName + "(id int not null auto_increment primary key, " +
-                column2 + " varchar(32), " +
-                column3 + " varchar(50)) ";
+    //Takes userName and password from user in Login window, returns true if it matches with database users table
+    public static boolean checkLogin(String userNameInput, String userPasswordInput) {
+        String userPasswordFromDataBase = "incorrectPassword";
 
-        executeQuery(query);
+        //Connects to database
+        try {
+            connection = DB_Connector.connect(userName,passWord);
+            Statement stmt = connection.createStatement();
+
+
+            //Searches database for Username, if found returns its password
+            ResultSet passwordResult = stmt.executeQuery("SELECT password FROM users WHERE username = '" + userNameInput + "'");
+
+
+            while (passwordResult.next()) {
+
+                userPasswordFromDataBase = passwordResult.getString("password");
+            }
+
+            connection.close();
+        } catch (SQLException e) {
+            System.err.println("Got an exception! ");
+            System.err.println(e.getMessage());
+        }
+
+
+        if (userPasswordFromDataBase.equals(userPasswordInput)) {
+            System.out.println("\nPassword was correct!");
+            return true;
+        } else {
+
+            System.out.println("\nUsername or password is incorrect!");
+            return false;
+        }
     }
 
     public static void insertNewChildren(String name, String birthDate) {
@@ -59,9 +89,7 @@ public class DB_Statements {
     public static void getChildNameById(String id) {
 
         try {
-            String url = "jdbc:mysql://localhost:3307/daycare";
-
-            connection = DB_Connector.connect("root", "2519");
+            connection = DB_Connector.connect(userName, passWord);
             Statement stmt = connection.createStatement();
 
             ResultSet rs = stmt.executeQuery("SELECT name FROM children WHERE id = " + id);
@@ -74,42 +102,5 @@ public class DB_Statements {
             System.err.println("Got an exception! ");
             System.err.println(e.getMessage());
         }
-    }
-
-    public static boolean isUserReal(String userNameInput, String userPasswordInput) {
-        ArrayList<String> userPasswords = new ArrayList<>();
-
-        try {
-            String url = "jdbc:mysql://localhost:3307/daycare";
-
-            connection = DB_Connector.connect("root", "2519");
-            Statement stmt = connection.createStatement();
-
-
-            //SELECT password FROM users WHERE users = " + userNameInput
-            ResultSet passwordResult = stmt.executeQuery("SELECT password FROM users WHERE username = '"+ userNameInput + "'");
-
-
-            while (passwordResult.next()) {
-                userPasswords.add(passwordResult.getString("password"));
-            }
-
-            connection.close();
-        } catch (SQLException e) {
-            System.err.println("Got an exception! ");
-            System.err.println(e.getMessage());
-        }
-
-
-        for (String element: userPasswords
-             ) {
-            if (element.equals(userPasswordInput)) {
-                System.out.println("Password was correct!");
-                return true;
-            }
-        }
-
-        System.out.println("Username or password is incorrect!");
-        return false;
     }
 }
