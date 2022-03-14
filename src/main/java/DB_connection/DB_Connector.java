@@ -12,7 +12,7 @@ public class DB_Connector {
     private static String db;
 
     // declare URL and initiate
-    private static String url = "jdbc:mysql://localhost:3307/daycare";
+    private static String url = "jdbc:mysql://localhost:3306/daycare";
 
     // declare username
     private static String userName;

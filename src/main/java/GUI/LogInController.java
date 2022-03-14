@@ -31,8 +31,10 @@ public class LogInController implements Initializable {
             @Override
             //here we are connecting our fields with our login event
             public void handle(ActionEvent event) {
-
                 DB_Utils.login(event, usrNmFld.getText(), pswFld.getText());
+                ChangeSceneController.changeScene(event, "welcome.fxml", "Welcome", usrNmFld.getText());
+
+
             }
         });
 
@@ -40,6 +42,4 @@ public class LogInController implements Initializable {
 
 
 
-}
-
-
+   }

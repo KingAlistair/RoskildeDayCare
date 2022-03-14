@@ -1,5 +1,6 @@
 package DB_connection;
 
+import GUI.ChangeSceneController;
 import javafx.event.ActionEvent;
 import javafx.scene.control.Alert;
 
@@ -10,7 +11,7 @@ public class DB_Utils {
     //we create our constant variables, which we will use to connect to our database
     private static final String URL = "jdbc:mysql://localhost:3306/daycare" ;
     private static final String USERNAME = "root";
-    private static final String PASSWORD = "pass";
+    private static final String PASSWORD = "Kanelsnegl713!";
     private static final String DATABASE = "daycare";
 
 
@@ -42,6 +43,7 @@ public class DB_Utils {
                     String retrievedPassword = rs.getString("password");
                     if (retrievedPassword.equals("password")){
                         // this is where the change scene will happen
+                        ChangeSceneController.changeScene(event, "welcome.fxml","welcome", username);
                     }
                 }
             }

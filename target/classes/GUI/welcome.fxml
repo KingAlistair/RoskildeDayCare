@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: eeefed;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.WelcomeController">
+   <children>
+      <StackPane prefHeight="400.0" prefWidth="200.0" style="-fx-background-color: e1b1f5;">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/panda.jpg" />
+               </image>
+            </ImageView>
+            <Label text="WELCOME" />
+         </children>
+      </StackPane>
+      <TableView layoutX="214.0" layoutY="75.0" prefHeight="221.0" prefWidth="373.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="Mon." />
+          <TableColumn prefWidth="75.0" text="Tue." />
+            <TableColumn prefWidth="75.0" text="Wed." />
+            <TableColumn prefWidth="75.0" text="Thur." />
+            <TableColumn prefWidth="75.0" text="Fri." />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

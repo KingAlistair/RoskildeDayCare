@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class DB_Test {
     public static void main(String[] args) {
         //  DB_Connector.connect("root", "2519");
-        DB_Statements.connect("root", "2519");
+        DB_Statements.connect("root", "Kanelsnegl713!");
 
         System.out.println("Hi user! What do you want to do?\n");
         System.out.println("1: Add new child to database");
