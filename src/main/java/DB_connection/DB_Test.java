@@ -25,6 +25,11 @@ public class DB_Test {
                 DB_Statements.getChildNameById(id);
                 break;
 
+            case "3":
+               System.out.println("Add username:");
+                String name = sc.nextLine();
+                break;
+
             default:
                 System.out.println("Wrong input, bye!");
                 break;
@@ -53,4 +58,7 @@ public class DB_Test {
 
         System.out.println("\nParent," + parentName + " was added to the Database, dont forget to refresh database ^^");
     }
+
+
+
 }
