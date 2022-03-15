@@ -51,9 +51,8 @@ FOREIGN KEY (parent_id) REFERENCES parents(id));
 
 CREATE TABLE users(
     id INT AUTO_INCREMENT PRIMARY KEY,
+    employee_id INT,
     username VARCHAR(255),
     password VARCHAR(255),
-    FOREIGN KEY (id) REFERENCES employees(id)
+    FOREIGN KEY (employee_id) REFERENCES employees(id)
 );
-
-DROP TABLE users;

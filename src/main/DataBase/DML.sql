@@ -28,6 +28,6 @@ INNER JOIN daycare_groups ON children.id = daycare_groups.children_id
 INNER JOIN employees ON daycare_groups.employee_id = employees.id
 WHERE daycare_groups.name = 'Bunny group';
 
-INSERT INTO users (username, password)
-VALUES ('SandraAdmin', 'admin123'),
-       ('BobKind', 'kind123');
+INSERT INTO users (employee_id,username, password)
+VALUES (1,'SandraAdmin', 'admin123'),
+       (2,'BobKind', 'kind123');
