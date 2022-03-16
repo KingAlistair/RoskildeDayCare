@@ -1,5 +1,10 @@
 package DB_connection;
 
+import javafx.beans.Observable;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import tableClasses.Children;
+
 import java.sql.*;
 import java.util.ArrayList;
 
@@ -7,7 +12,7 @@ public class DB_Statements {
 
     //Use your own dataBase login info
     final private static String userName = "root";
-    final private static String passWord = "2519";
+    final private static String passWord = "Kanelsnegl713!";
 
     private static Connection connection;
 
@@ -37,6 +42,7 @@ public class DB_Statements {
     }
 
     //Takes userName and password from user in Login window, returns true if it matches with database users table
+
     public static boolean checkLogin(String userNameInput, String userPasswordInput) {
         String userPasswordFromDataBase = "incorrectPassword";
 
@@ -70,6 +76,38 @@ public class DB_Statements {
             System.out.println("\nUsername or password is incorrect!");
             return false;
         }
+    }
+
+    public static ObservableList<Children> getChildrenFromDatabase() {
+
+        ObservableList<Children> childrenArrayList = FXCollections.observableArrayList();
+
+        //Connects to database
+        try {
+            connection = DB_Connector.connect(userName,passWord);
+            Statement stmt = connection.createStatement();
+
+
+            //Searches database for Username, if found returns its password
+            ResultSet cResult = stmt.executeQuery("SELECT * FROM children");
+
+
+            while (cResult.next()) {
+                int id = cResult.getInt("id");
+                String name = cResult.getString("name");
+                String birthDate = cResult.getString("birthDate");
+
+                Children children = new Children(id, name, birthDate);
+
+                childrenArrayList.add(children);
+            }
+
+            connection.close();
+        } catch (SQLException e) {
+            System.err.println("Got an exception! ");
+            System.err.println(e.getMessage());
+        }
+        return childrenArrayList;
     }
 
     public static void insertNewChildren(String name, String birthDate) {

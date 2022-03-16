@@ -1,4 +1,4 @@
-#DROP DATABASE daycare;
+DROP DATABASE daycare;
 
 CREATE DATABASE IF NOT EXISTS daycare;
 

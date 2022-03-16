@@ -4,15 +4,20 @@ import DB_connection.DB_Statements;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.control.cell.TextFieldTableCell;
 import javafx.stage.Stage;
+import tableClasses.Children;
 
 import java.io.IOException;
+import java.net.URL;
+import java.util.ArrayList;
+import java.util.ResourceBundle;
 
 public class SceneController {
     @FXML
@@ -23,6 +28,19 @@ public class SceneController {
 
     @FXML
     private TextField usrNmFld;
+
+
+    @FXML
+    private TableColumn<Children, String> bd_column;
+
+    @FXML
+    private TableColumn<Children, Integer> idColumn;
+
+    @FXML
+    private TableColumn<Children, String> name_column;
+
+    @FXML
+    private TableView<Children> tableView;
 
 
     private Stage stage;
@@ -72,4 +90,26 @@ public class SceneController {
         stage.setScene(scene);
         stage.show();
     }
+
+    public void switchToEmployeeList(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("employeeList.fxml"));
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+
+
+//    @Override
+//    public void initialize(URL url, ResourceBundle resourceBundle) {
+//        //set up the columns in the table
+//        name_column.setCellValueFactory(new PropertyValueFactory<Children, String>("Name"));
+//        bd_column.setCellValueFactory(new PropertyValueFactory<Children, String>("Birthdate"));
+//        idColumn.setCellValueFactory(new PropertyValueFactory<Children, Integer>("ID"));
+//
+//        //load dummy data
+//        tableView.setItems(DB_Statements.getChildrenFromDatabase());
+//
+//
+//    }
 }
