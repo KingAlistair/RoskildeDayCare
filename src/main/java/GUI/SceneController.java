@@ -30,18 +30,6 @@ public class SceneController {
     private TextField usrNmFld;
 
 
-    @FXML
-    private TableColumn<Children, String> bd_column;
-
-    @FXML
-    private TableColumn<Children, Integer> idColumn;
-
-    @FXML
-    private TableColumn<Children, String> name_column;
-
-    @FXML
-    private TableView<Children> tableView;
-
 
     private Stage stage;
     private Scene scene;
@@ -100,16 +88,5 @@ public class SceneController {
     }
 
 
-//    @Override
-//    public void initialize(URL url, ResourceBundle resourceBundle) {
-//        //set up the columns in the table
-//        name_column.setCellValueFactory(new PropertyValueFactory<Children, String>("Name"));
-//        bd_column.setCellValueFactory(new PropertyValueFactory<Children, String>("Birthdate"));
-//        idColumn.setCellValueFactory(new PropertyValueFactory<Children, Integer>("ID"));
-//
-//        //load dummy data
-//        tableView.setItems(DB_Statements.getChildrenFromDatabase());
-//
-//
-//    }
+
 }
