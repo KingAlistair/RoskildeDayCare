@@ -20,6 +20,7 @@ The data is to be stored into a database
 
 ## UML:
 -SWD: using design guidelines
+
     Establish an understanding of the problem
 
 -Domain Model
