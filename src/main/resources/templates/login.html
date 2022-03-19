@@ -1,0 +1,23 @@
+<head th:replace="fragments/header :: head"></head>
+
+<body>
+<div class="container-fluid text-center">
+    <!--<h1>Welcome to my application</h1>-->
+    <!--    <a class="h2" th:href="@{/users}">Manage users</a>-->
+
+    <div class="row container">
+       <div class="wrap">
+           <h1>Welcome to DaycareApp</h1>
+           <h3>Please input your credentials below</h3>
+           <form th:action="@{/logUserIn}" class="form-group custom-form">
+               <label for="usernameInput">Input your username</label>
+               <input type="text" id="usernameInput" name="username" class="form-control">
+               <label for="passwordInput">Input your password</label>
+               <input type="password" id="passwordInput" name="password" class="form-control">
+               <input type="submit" value="Submit" class="btn btn-primary">
+           </form>
+       </div>
+    </div>
+</div>
+</body>
+</html>

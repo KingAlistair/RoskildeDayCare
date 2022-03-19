@@ -1,9 +1,9 @@
-package com.example.myfirstapplication.user;
+package com.teletearbies.roskildedaycare.entity;
 
 import javax.persistence.*;
 
 @Entity
-@Table(name = "employees")
+@Table(name = "users")
 public class User {
     @Id
     //ID COLUMN WILL BE GENERATED AUTOMATICALLY
@@ -20,13 +20,15 @@ public class User {
     private String firstName;
     @Column(length = 45, nullable = false, name = "last_name")
     private String lastName;
-    private boolean enabled;
 
-
-    public User(){
-
+    public User(String username, String password, String firstName, String lastName) {
+        this.username = username;
+        this.password = password;
+        this.firstName = firstName;
+        this.lastName = lastName;
     }
 
+    public User () {}
 
     public Integer getId() {
         return id;
@@ -77,13 +79,5 @@ public class User {
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 '}';
-    }
-
-    public boolean isEnabled() {
-        return enabled;
-    }
-
-    public void setEnabled(boolean enabled) {
-        this.enabled = enabled;
     }
 }

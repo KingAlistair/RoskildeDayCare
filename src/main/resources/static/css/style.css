@@ -1,0 +1,61 @@
+body{
+    overflow-x: hidden !important;
+    padding: 50px 100px !important;
+    background : cornflowerblue;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    height: 600px;
+}
+
+.container {
+    width: 80%;
+    margin: 5% auto;
+    height: 600px;
+    text-align: center;
+}
+
+.left, .right {
+    width: 50%;
+}
+
+.left{
+    background-color: yellow;
+}
+
+.error{
+    padding: 20px;
+    margin: 10% auto;
+    width: 30%;
+    color: white;
+    background-color: red;
+}
+
+.wrap{
+    width: fit-content;
+    text-align: center;
+    margin: 5% auto;
+}
+
+.navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 1px solid grey;
+    height: 50px;
+}
+
+a{
+    text-decoration: none;
+}
+
+.account-info{
+    width: 40%;
+}
+
+.nav-links{
+    justify-content: space-evenly;
+    width: 60%;
+}

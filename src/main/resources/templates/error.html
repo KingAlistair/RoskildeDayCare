@@ -1,0 +1,13 @@
+<head th:replace="fragments/header :: head"></head>
+
+<body>
+<div class="container-fluid text-center">
+<!--<h1>Welcome to my application</h1>-->
+<!--    <a class="h2" th:href="@{/users}">Manage users</a>-->
+
+    <div class="row container">
+            <div th:text="${errorMessage}" class="error"></div>
+    </div>
+</div>
+</body>
+</html>

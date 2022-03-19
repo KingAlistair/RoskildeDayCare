@@ -1,7 +1,7 @@
-package com.example.myfirstapplication;
+package com.teletearbies.roskildedaycare;
 
-import com.example.myfirstapplication.user.User;
-import com.example.myfirstapplication.user.UserRepository;
+import com.teletearbies.roskildedaycare.entity.User;
+import com.teletearbies.roskildedaycare.repository.UserRepository;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,7 +9,6 @@ import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabas
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.test.annotation.Rollback;
 
-import java.util.Iterator;
 import java.util.Optional;
 
 @DataJpaTest
@@ -17,15 +16,15 @@ import java.util.Optional;
 @Rollback(false)
 
 public class UserRepositoryTests {
-@Autowired private UserRepository  repo;
+@Autowired private UserRepository repo;
 
 @Test
-    public void testAddNewUser(){
+    public void testNewUser(){
     User user = new User();
-    user.setUsername("mubbi");
-    user.setPassword("1234");
-    user.setFirstName("mubbi");
-    user.setLastName("dombovari");
+    user.setUsername("rasmus");
+    user.setPassword("12345");
+    user.setFirstName("rasmus");
+    user.setLastName("larson");
 
     User savedUser = repo.save(user);
 
@@ -67,18 +66,7 @@ public class UserRepositoryTests {
          Assertions.assertThat(optionalUser).isPresent();
         System.out.println(optionalUser.get());
     }
-
-    @Test
-    public void testDelete(){
-    Integer userId = 5;
-     repo.deleteById(userId);
-
-     Optional<User> optionalUser = repo.findById(userId);
-     Assertions.assertThat(optionalUser).isNotPresent();
-
-    }
 }
-
 
 
 

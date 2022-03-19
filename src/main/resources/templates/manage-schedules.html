@@ -1,0 +1,55 @@
+<head th:replace="fragments/header :: head"></head>
+
+<body>
+<div class="container-fluid text-center">
+    <!--<h1>Welcome to my application</h1>-->
+    <!--    <a class="h2" th:href="@{/users}">Manage users</a>-->
+
+    <div class="row navbar">
+        <div class="row account-info">
+            <div>Logged in as: </div>
+            <div th:text="${adminName}"></div>
+        </div>
+
+        <div class="row nav-links">
+            <a th:href="@{/displayAllUsers}">Display all users</a>
+            <a th:href="@{/createWorkSchedules}">Manage schedules</a>
+            <a th:href="@{/displayWaitingList}">Display waiting list</a>
+            <a th:href="@{/displayAddNewForm}">Add children</a>
+        </div>
+    </div>
+
+    <div class="main">
+
+
+
+        <table class="table">
+            <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">Phone</th>
+                <th scope="col">Address</th>
+                <th scope="col">Actions</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="employee : ${allEmployees}">
+                <td th:text="${employee.employee_id}"></td>
+                <td th:text="${employee.name}"></td>
+                <td th:text="${employee.phoneNumber}"></td>
+                <td th:text="${employee.address}"></td>
+                <td>
+                    <a th:href="@{/editSchedule/}">Schedule</a>
+                    <a th:href="@{/removeEmployee}">Remove</a>
+                </td>
+            </tr>
+
+            </tbody>
+        </table>
+
+    </div>
+
+</div>
+</body>
+</html>

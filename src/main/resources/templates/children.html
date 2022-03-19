@@ -1,0 +1,36 @@
+<head th:replace="fragments/header :: head"></head>
+
+<body>
+<div class="container-fluid text-center">
+  <div>
+    <h2>Manage children</h2>
+    <div class="m-2">
+   <!--   <a class="h3"  th:href="@{/users/new}">Add new user</a> -->
+    </div>
+  </div>
+  <table class="table" table-bordered>
+    <thead class ="thead-dark"></thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Address</th>
+      <th>Phone Number</th>
+      <th></th>
+    </tr>
+    <tbody>
+    <th:block th:each="children : ${listChildren}">
+      <tr>
+        <td>[[${children.id}]]</td>
+        <td>[[${children.name}]]</td>
+        <td>[[${children.phoneNumber}]]</td>
+        <td>[[${children.address}]]</td>
+        <td>
+
+        </td>
+      </tr>
+    </th:block>
+    </tbody>
+  </table>
+</div>
+</body>
+</html>
