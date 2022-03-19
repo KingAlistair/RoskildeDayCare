@@ -64,8 +64,4 @@
  
  
  
-<p style="text-align: center"><img src="https://github.com/KingAlistair/RoskildeDayCare/blob/main/images/bff.jpg?raw=true" width="250" height="200"></p>
-
-<p align="center">
-  <img src="https://github.com/waldyr/Sublime-Installer/blob/master/sublime_text.png?raw=true" alt="Sublime's custom image"/>
-</p>
+<p align="center"><img src="https://github.com/KingAlistair/RoskildeDayCare/blob/main/images/bff.jpg?raw=true" width="250" height="200"></p>
