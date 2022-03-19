@@ -6,17 +6,11 @@ Design your console or GUI with regards to your focus group
 The data is to be stored into a database
 
         -Connect to database
-
         -Login window
-
         -Users page
-
         -Children page
-
         -Make it look somewhat nice
-
         -Finish the project
-
 
 
 ## Bugs:
