@@ -6,17 +6,21 @@
 ## Code
 
 -Connect to database
--Login window
--Users page
--Children page
--Make it look somewhat nice
--Finish the project
 
+-Login window
+
+-Users page
+
+-Children page
+
+-Make it look somewhat nice
+
+-Finish the project
 
 ## UML:
 
-## Presentation:
 
+## Presentation:
 
 
 # Bugs:
