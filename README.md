@@ -46,6 +46,7 @@
 ### SWC: in collaboration with SWD
 
 1. Implement your software solution in JAVA
+
                 Design your console or GUI with regards to your focus group
                 
                 The data is to be stored into a database
