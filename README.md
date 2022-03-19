@@ -18,37 +18,43 @@ The data is to be stored into a database
 -Finish the project
 
 
-## UML:
--SWD: using design guidelines
 
-    Establish an understanding of the problem
+## Bugs:
 
--Domain Model
 
-    Establish, define and model use cases
+
+
+## UML: 
+
+### SWD: using design guidelines:
+
+1. Establish an understanding of the problem
+        
+        Domain Model
+        
+2. Establish, define and model use cases
     
--Use case descriptions/use case diagram
+    Use case descriptions/use case diagram
 
-    Model software system components
+3. Model software system components
     
--Design Class Diagram
+    Design Class Diagram
 
-    Model database components
+4. Model database components
     
--Entity Relationship Diagram
+    Entity Relationship Diagram
 
-    Develop an overview of your solution with a State Machine Diagram for Roskilde Daycare’s administrative program.  
-    
--SWC: in collaboration with SWD
+5. Develop an overview of your solution with a State Machine Diagram for Roskilde Daycare’s administrative program.  
 
-    Implement your software solution in JAVA
-    
+
+### SWC: in collaboration with SWD
+
+1. Implement your software solution in JAVA
+  
 
 ## Presentation:
 
-Create a presentation of your solution
-Decisions and conclusions
- 
+1.Create a presentation of your solution
 
-# Bugs:
+    Decisions and conclusions
  
