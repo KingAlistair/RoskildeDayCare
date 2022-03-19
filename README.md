@@ -26,19 +26,19 @@
 
 1. Establish an understanding of the problem
         
-        Domain Model
+        -Domain Model
         
 2. Establish, define and model use cases
     
-        Use case descriptions/use case diagram
+       -Use case descriptions/use case diagram
 
 3. Model software system components
     
-          Design Class Diagram
+          -Design Class Diagram
 
 4. Model database components
     
-            Entity Relationship Diagram
+            -Entity Relationship Diagram
 
 5. Develop an overview of your solution with a State Machine Diagram for Roskilde Daycare’s administrative program.  
 
@@ -47,14 +47,14 @@
 
 1. Implement your software solution in JAVA
 
-                Design your console or GUI with regards to your focus group
+               -Design your console or GUI with regards to your focus group
                 
-                The data is to be stored into a database
+               -The data is to be stored into a database
   
 
 ## Presentation:
 
 1. Create a presentation of your solution
 
-         Decisions and conclusions
+         -Decisions and conclusions
  
