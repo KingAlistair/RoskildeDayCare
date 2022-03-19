@@ -1,7 +1,4 @@
-# RoskildeDayCare
-
-
-# Do list:
+# To do list
 
 ## Code 
 
