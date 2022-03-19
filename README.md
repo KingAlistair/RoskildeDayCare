@@ -5,17 +5,17 @@
 Design your console or GUI with regards to your focus group
 The data is to be stored into a database
 
--Connect to database
+        -Connect to database
 
--Login window
+        -Login window
 
--Users page
+        -Users page
 
--Children page
+        -Children page
 
--Make it look somewhat nice
+        -Make it look somewhat nice
 
--Finish the project
+        -Finish the project
 
 
 
@@ -54,7 +54,7 @@ The data is to be stored into a database
 
 ## Presentation:
 
-1.Create a presentation of your solution
+1. Create a presentation of your solution
 
          Decisions and conclusions
  
