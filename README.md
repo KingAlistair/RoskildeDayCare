@@ -1,4 +1,4 @@
-![Oh_noo](https://github.com/KingAlistair/RoskildeDayCare/blob/main/images/panda.jpg?raw=true)
+![Oh_noo](https://github.com/KingAlistair/RoskildeDayCare/blob/main/images/panda.jpg?raw=true =250x250)
 
 
 
