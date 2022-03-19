@@ -1,5 +1,5 @@
+![Oh_noo](https://github.com/KingAlistair/RoskildeDayCare/blob/main/images/panda.jpg?raw=true)
 
-![Oh_noo](https://github.com/KingAlistair/RoskildeDayCare/blob/main/images/bff.jpg?raw=true)
 
 
 # To do list:
@@ -62,3 +62,5 @@
 
          -Decisions and conclusions
  
+ 
+ ![Oh_noo](https://github.com/KingAlistair/RoskildeDayCare/blob/main/images/bff.jpg?raw=true)
