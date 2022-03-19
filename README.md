@@ -15,6 +15,8 @@
 
 -Children page
 
+-Schedule
+
 -Make it look somewhat nice
 
 -Finish the project
