@@ -34,15 +34,15 @@ The data is to be stored into a database
         
 2. Establish, define and model use cases
     
-    Use case descriptions/use case diagram
+        Use case descriptions/use case diagram
 
 3. Model software system components
     
-    Design Class Diagram
+          Design Class Diagram
 
 4. Model database components
     
-    Entity Relationship Diagram
+            Entity Relationship Diagram
 
 5. Develop an overview of your solution with a State Machine Diagram for Roskilde Daycare’s administrative program.  
 
@@ -56,5 +56,5 @@ The data is to be stored into a database
 
 1.Create a presentation of your solution
 
-    Decisions and conclusions
+         Decisions and conclusions
  
