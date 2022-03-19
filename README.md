@@ -1,16 +1,18 @@
 # To do list:
 
-## Code 
+## Code: 
 
-Design your console or GUI with regards to your focus group
-The data is to be stored into a database
+-Connect to database
 
-        -Connect to database
-        -Login window
-        -Users page
-        -Children page
-        -Make it look somewhat nice
-        -Finish the project
+-Login window
+
+-Users page
+
+-Children page
+
+-Make it look somewhat nice
+
+-Finish the project
 
 
 ## Bugs:
@@ -44,6 +46,9 @@ The data is to be stored into a database
 ### SWC: in collaboration with SWD
 
 1. Implement your software solution in JAVA
+                Design your console or GUI with regards to your focus group
+                
+                The data is to be stored into a database
   
 
 ## Presentation:
