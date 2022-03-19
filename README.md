@@ -24,18 +24,23 @@ The data is to be stored into a database
     Establish an understanding of the problem
 
 -Domain Model
+
     Establish, define and model use cases
     
 -Use case descriptions/use case diagram
+
     Model software system components
     
 -Design Class Diagram
+
     Model database components
     
 -Entity Relationship Diagram
+
     Develop an overview of your solution with a State Machine Diagram for Roskilde Daycare’s administrative program.  
     
 -SWC: in collaboration with SWD
+
     Implement your software solution in JAVA
     
 
