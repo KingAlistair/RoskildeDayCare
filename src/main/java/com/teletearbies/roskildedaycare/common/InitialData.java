@@ -12,7 +12,7 @@ import org.springframework.context.annotation.Configuration;
 
 import javax.annotation.PostConstruct;
 
-@Configuration
+/*@Configuration
 public class InitialData {
 
     @Autowired
@@ -42,4 +42,4 @@ public class InitialData {
 
         childrenService.saveChildren(children1);
     }
-}
+}*/
