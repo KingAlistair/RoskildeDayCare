@@ -19,7 +19,7 @@ public class MyfirstapplicationApplication {
 		try {
 
 			Desktop d = Desktop.getDesktop();
-			d.browse(new URI("http://localhost:8080/"));
+			d.browse(new URI("http://localhost:8093/"));
 
 		} catch (Exception e) {
 			e.printStackTrace();
