@@ -64,4 +64,4 @@
  
  
  
-<p align="center"><img src="https://github.com/KingAlistair/RoskildeDayCare/blob/main/images/bff.jpg?raw=true" width="250" height="200"></p>
+<p align="center"><img src="https://github.com/KingAlistair/RoskildeDayCare/blob/main/images/bff.jpg?raw=true" width="350" height="250"></p>
