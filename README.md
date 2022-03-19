@@ -1,4 +1,7 @@
-![Oh_noo](https://github.com/KingAlistair/RoskildeDayCare/blob/main/images/panda.jpg?raw=true=250x250)
+![Oh_noo](https://github.com/KingAlistair/RoskildeDayCare/blob/main/images/panda.jpg?raw=true)
+
+
+<img src="https://github.com/KingAlistair/RoskildeDayCare/blob/main/images/panda.jpg?raw=true" width="100" height="100">
 
 
 
