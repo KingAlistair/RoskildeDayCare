@@ -1,7 +1,4 @@
-![Oh_noo](https://github.com/KingAlistair/RoskildeDayCare/blob/main/images/panda.jpg?raw=true)
-
-
-<img src="https://github.com/KingAlistair/RoskildeDayCare/blob/main/images/panda.jpg?raw=true" width="100" height="100">
+<img src="https://github.com/KingAlistair/RoskildeDayCare/blob/main/images/panda.jpg?raw=true" width="250" height="250">
 
 
 
@@ -66,4 +63,5 @@
          -Decisions and conclusions
  
  
- ![Oh_noo](https://github.com/KingAlistair/RoskildeDayCare/blob/main/images/bff.jpg?raw=true)
+ 
+ <img src="https://github.com/KingAlistair/RoskildeDayCare/blob/main/images/bff.jpg?raw=true" width="250" height="250">
