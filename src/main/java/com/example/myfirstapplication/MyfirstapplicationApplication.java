@@ -17,9 +17,8 @@ public class MyfirstapplicationApplication {
 
 	public static void openBrowser() {
 		try {
-
 			Desktop d = Desktop.getDesktop();
-			d.browse(new URI("http://localhost:8093/"));
+			d.browse(new URI("http://localhost:8000/"));
 
 		} catch (Exception e) {
 			e.printStackTrace();
