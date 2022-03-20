@@ -1,6 +1,7 @@
 package com.teletearbies.roskildedaycare.entity;
 
 import javax.persistence.*;
+import java.util.Date;
 
 @Entity
 @Table(name = "children")
@@ -14,18 +15,16 @@ public class Children {
         @Column(nullable = false, unique = false, length = 45)
         private String name;
 
-        @Column(length = 45, nullable = false, name = "address")
-        private String address;
-        @Column(length = 45, nullable = false, name = "phone_number")
-        private String phoneNumber;
+        @Column(length = 45, nullable = false, name = "birthdate")
+        private Date birthDate;
 
-        public Children(String name, String address, String phoneNumber) {
+        public Children(Integer id, String name, Date birthDate) {
+                this.id = id;
                 this.name = name;
-                this.address = address;
-                this.phoneNumber = phoneNumber;
+                this.birthDate = birthDate;
         }
 
-        public Children(){
+        public Children() {
 
         }
 
@@ -45,19 +44,11 @@ public class Children {
                 this.name = name;
         }
 
-        public String getAddress() {
-                return address;
+        public Date getBirthDate() {
+                return birthDate;
         }
 
-        public void setAddress(String address) {
-                this.address = address;
-        }
-
-        public String getPhoneNumber() {
-                return phoneNumber;
-        }
-
-        public void setPhoneNumber(String phoneNumber) {
-                this.phoneNumber = phoneNumber;
+        public void setBirthDate(Date birthDate) {
+                this.birthDate = birthDate;
         }
 }
