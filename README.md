@@ -15,6 +15,8 @@
 
 -Children page
 
+-Waiting list
+
 -Schedule
 
 -Make it look somewhat nice
